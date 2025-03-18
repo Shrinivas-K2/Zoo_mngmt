@@ -1,0 +1,105 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .navbar a:hover {
+    background-color: #4CAF50;
+    border-radius: 5px;
+  }
+  
+  /* Admin Dashboard */
+  .dashboard-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+  }
+  
+  .card {
+    background-color: #81C784;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Data Display Section for Animals and Employees */
+.data-display-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 90%;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.data-display-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Table Styling for Data Display */
+#dataTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+#dataTable th,
+#dataTable td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 1rem;
+}
+
+#dataTable th {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#dataTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#dataTable tr:hover {
+  background-color: #e0f7fa;
+}
+
+/* Responsive Adjustments for Small Screens */
+@media (max-width: 768px) {
+  .dashboard-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card {
+      width: 80%;
+      margin-bottom: 15px;
+  }
+
+  .data-display-section {
+      padding: 10px;
+      width: 95%;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management</title>
+  <link rel="stylesheet" href="employee.css">
+</head>
+<body>
+  <h2>Manage Employees</h2>
+  <form  action="/employee" method="POST" id="addEmployeeForm" >
+    <label for="employeeName">Name:</label>
+    <input type="text" id="employeeName" name="employeeName" required>
+
+    <label for="role">Role:</label>
+    <select id="role" name="role" required>
+      <option value="Manager">Manager</option>
+      <option value="Staff">Staff</option>
+      <option value="Veterinarian">Veterinarian</option>
+    </select>
+
+    <label for="contactInfo">Contact Info:</label>
+    <input type="text" id="contactInfo" name="contactInfo" required>
+
+    <label for="salary">Salary:</label>
+    <input type="number" id="salary" name="salary" step="0.01" required>
+
+    <label for="zooID">Zoo ID:</label>
+    <input type="number" id="zooID" name="zooID" required>
+
+    <button type="submit">Add Employee</button>
+  </form>
+
+  <h3>Employee List</h3>
+  <table id="employeeTable">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Contact Info</th>
+      <th>Salary</th>
+      <th>Zoo ID</th>
+      <th>Actions</th>
+    </tr>
+    <!-- JavaScript will dynamically add rows here -->
+  </table>
+
+  <script src="employee.js"></script>
+</body>
+</html>

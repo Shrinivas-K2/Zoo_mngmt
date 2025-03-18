@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard - Zoo Management</title>
+  <link rel="stylesheet" href="admin-dashboard.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <a href="animal.html">Animals</a>
+    <a href="employee.html">Employees</a>
+    <a href="ticket.html">Tickets</a>
+    <a href="report.html">Reports</a>
+    <a href="/views/login.ejs">Logout</a>
+  </nav>
+
+  <!-- Dashboard Section -->
+  <section class="dashboard-section">
+    <h2>Admin Dashboard</h2>
+    <div class="dashboard-cards">
+      <!-- Total Animals Card -->
+      <div class="card" id="totalAnimalsCard" onclick="loadData('animal')">Total Animals:</div>
+      <!-- Total Employees Card -->
+      <div class="card" id="totalEmployeesCard" onclick="loadData('employee')">Total Employees:</div>
+      <div class="card">Total Visitors Today:</div>
+    </div>
+  </section>
+
+  <!-- Display Area for Animal and Employee Data -->
+  <section id="dataDisplaySection" class="data-display-section" style="display: none;">
+    <h3 id="dataTitle"></h3>
+    <table id="dataTable">
+      <thead>
+        <tr id="tableHeaders"></tr>
+      </thead>
+      <tbody id="tableBody">
+        <!-- Data rows will be dynamically added here -->
+      </tbody>
+    </table>
+  </section>
+
+  <script>
+    // Function to Load Data from Backend and Display in the Table
+    function loadData(type) {
+      let endpoint = '';
+      let title = '';
+      
+      // Determine endpoint and title based on the type
+      if (type === 'animal') {
+        endpoint = '/animal';
+        title = 'Animal Data';
+      } else if (type === 'employee') {
+        endpoint = '/employee';
+        title = 'Employee Data';
+      }
+      
+      fetch(endpoint)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          // Set section title
+          document.getElementById('dataTitle').innerText = title;
+          
+          // Prepare headers based on data keys
+          const headers = Object.keys(data[0] || {});
+          const headerRow = document.getElementById('tableHeaders');
+          headerRow.innerHTML = '';
+          headers.forEach(header => {
+            const th = document.createElement('th');
+            th.innerText = header.charAt(0).toUpperCase() + header.slice(1);
+            headerRow.appendChild(th);
+          });
+
+          // Populate table rows
+          const tableBody = document.getElementById('tableBody');
+          tableBody.innerHTML = '';
+          data.forEach(item => {
+            const row = document.createElement('tr');
+            headers.forEach(header => {
+              const cell = document.createElement('td');
+              cell.innerText = item[header];
+              row.appendChild(cell);
+            });
+            tableBody.appendChild(row);
+          });
+
+          // Show the data display section
+          document.getElementById('dataDisplaySection').style.display = 'block';
+        })
+        .catch(error => console.error('Error fetching data:', error));
+    }
+
+/*
+// function to display total animal count 
+// Function to load the total count of animals and display in the dashboard
+function loadCounts() {
+    fetch('/animals/count')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Update the card with the fetched animal count
+            document.getElementById('totalAnimalsCard').innerText = `Total Animals: ${data.totalAnimals}`;
+        })
+        .catch(error => console.error('Error fetching animal count:', error));
+}        
+loadCounts();     
+*/
+  </script>
+</body>
+</html>

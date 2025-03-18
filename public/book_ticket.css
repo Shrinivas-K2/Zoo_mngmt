@@ -1,0 +1,81 @@
+/* General Styling for the Ticket Booking Section */
+.ticket-booking-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #6dd5ed, #2193b0);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.ticket-booking-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+/* Form Styling */
+#ticketForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#ticketForm label {
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+#ticketForm input, 
+#ticketForm select {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+    transition: all 0.3s;
+}
+
+#ticketForm input:focus,
+#ticketForm select:focus {
+    outline: none;
+    border: 1px solid #2193b0;
+    box-shadow: 0 0 5px rgba(33, 147, 176, 0.3);
+}
+
+/* Button Styling */
+#ticketForm button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: #2193b0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#ticketForm button:hover {
+    background: #167ca5;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .ticket-booking-section {
+        padding: 30px;
+    }
+
+    #ticketForm input,
+    #ticketForm select,
+    #ticketForm button {
+        font-size: 1em;
+    }
+}

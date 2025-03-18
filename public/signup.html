@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Management Signup</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <section class="signup-section">
+        <h2>Create a Visitor Account</h2>
+        <p class="signup-description">Sign up to manage your Zoo Account as a Visitor</p>
+        
+        <form id="signupForm" class="signup-form" action="/signup" method="POST">
+            <input type="hidden" name="role" value="visitor">  <!-- Role set as visitor -->
+            
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Phone:</label>
+                <input type="phone" id="phone" name="phone" required>
+            </div>
+
+            <button type="submit" class="signup-button">Sign Up</button>
+        </form>
+
+        <p class="signup-links">
+            Already have an account? <a href="/">Log In</a>
+        </p>
+    </section>
+</body>
+</html>

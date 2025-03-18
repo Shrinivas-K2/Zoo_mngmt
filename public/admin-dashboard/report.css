@@ -1,0 +1,109 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* General body styling */
+body {
+    background-color: #f7f9fc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    color: #333;
+}
+
+h2 {
+    color: #2c3e50;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Button styling */
+button {
+    background-color: #3498db;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Report content container styling */
+#reportContent {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    font-size: 16px;
+    color: #34495e;
+}
+
+#reportContent h3 {
+    color: #2980b9;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+#reportContent p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+#reportContent .report-item {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+/* Highlighted statistics styling */
+.statistic {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    margin-bottom: 12px;
+    background-color: #ecf8ff;
+    border-left: 4px solid #3498db;
+    border-radius: 5px;
+}
+
+.statistic .label {
+    font-weight: bold;
+    color: #2980b9;
+}
+
+.statistic .value {
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Responsive styling */
+@media (max-width: 600px) {
+    #reportContent {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoo Management System</title>
+    <link rel="stylesheet" href="visiter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <a href="#home" class="logo">Zoo</a>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#animals">Animals</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#tickets">Tickets</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="port:3000">Login</a></li>
+          </ul>
+        </nav>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="home">
+    <h1>Welcome to the Zoo!</h1>
+    <p>Discover amazing animals and exciting events.</p>
+    <a href="book_ticket.html" class="btn-primary">Book Tickets Now</a>
+  </section> 
+
+    <!-- Animals Showcase -->
+  <section class="animals-showcase" id="animals">
+    <h2>Meet Our Animals</h2>
+    <div class="animal-grid">
+      <div class="animal-card">
+        <img src="Images/Tiger_01.jpg" alt="Lion">
+        <h5>Tiger</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Elephant_01.webp" alt="Elephant">
+        <h5>Elephant</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Giraffe_01.jpg" alt="Gorilla">
+        <h5>Gorilla</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Monkey_01.jpg" alt="Monkey">
+        <h5>Monkey</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Deer_01.jpg" alt="Deer">
+        <h5>Deer</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Chroco_01.jpg" alt="Chrocodile">
+        <h5>Chrocodile</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Deer_02.jpg" alt="Deer">
+        <h5>Deer</h5>
+      </div>
+      <div class="animal-card">
+        <img src="Images/Chroco_02.jpg" alt="Chrocodile">
+        <h5>Chrocodile</h5>
+      </div>
+      <!-- Add more animal cards as needed -->
+    </div>
+  </section>
+
+  <!-- adding dynamic animals here -->
+
+  <section class="animal-info-carousel" id="animalInfo">
+    <h2>Animal Information</h2>
+    <div class="carousel-container">
+      <button class="carousel-btn prev-btn">&#10094;</button>
+      <div id="animalInfoSlider" class="carousel-slides">
+        <!-- JavaScript will dynamically add animal info here -->
+      </div>
+      <button class="carousel-btn next-btn">&#10095;</button>
+    </div>
+  </section>
+            
+  
+  
+
+
+  <!-- Upcoming Events -->
+  <section class="events-section" id="events">
+    <h2>Upcoming Events</h2>
+    <p class="section-description">Join us for these exciting events at the zoo!</p>
+    <div class="event-list">
+      <div class="event-card">
+        <div class="event-image" style="background-image: url('Event/Bird_Wachting_02.jpg');"></div>
+        <div class="event-content">
+          <h4>Bird Watching Tour</h4>
+          <p>Date: March 10, 2025</p>
+          <a href="#register" class="btn-register">Register Now</a>
+        </div>
+      </div>
+      <div class="event-card">
+        <div class="event-image" style="background-image: url('Event/Night_Safari-01.jpg');"></div>
+        <div class="event-content">
+          <h4>Night Safari</h4>
+          <p>Date: March 20, 2025</p>
+          <a href="#register" class="btn-register">Register Now</a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-image" style="background-image: url('Event/Summar_Camp-01.jpg');"></div>
+        <div class="event-content">
+          <h4>Summer Camps</h4>
+          <p>Date: March 30, 2025</p>
+          <a href="#register" class="btn-register">Register Now</a>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <div class="event-image" style="background-image: url('Event/Photo_safari_02.jpg');"></div>
+        <div class="event-content">
+          <h4>Photo Safari</h4>
+          <p>Date: April 20, 2025</p>
+          <a href="#register" class="btn-register">Register Now</a>
+        </div>
+      </div>
+
+      
+      <!-- Add more event cards as needed -->
+    </div>
+  </section>
+  
+
+
+  <!-- Ticket Information -->
+  <section class="ticket-info" id="tickets">
+    <h2>Ticket Information</h2>
+    <p class="section-description">Choose from a variety of ticket options to suit your needs.</p>
+    <div class="ticket-types">
+      <div class="ticket-card">
+        <div class="icon-container">
+          <i class="fas fa-user"></i> <!-- Adult Icon -->
+        </div>
+        <h3>Adult</h3>
+        <p>Price: $20</p>
+        <a href="book_ticket.html" class="btn-book">Book Now</a>
+      </div>
+      <div class="ticket-card">
+        <div class="icon-container">
+          <i class="fas fa-child"></i> <!-- Child Icon -->
+        </div>
+        <h3>Child</h3>
+        <p>Price: $10</p>
+        <a href="book_ticket.html" class="btn-book">Book Now</a>
+      </div>
+      <!-- Add more ticket types if needed -->
+    </div>
+  </section>
+  
+
+  <!-- Footer -->
+<footer>
+    <div class="footer-content" id="contact">
+      <p>Contact Info: <a href="mailto:email@example.com">email@example.com</a> | Phone: +123 456 7890</p>
+      <div class="social-links">
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+      </div>
+      <p>&copy; 2023 Zoo Management System</p>
+    </div>
+  </footer>
+  
+
+
+
+   <script src="index.js"></script> 
+   <script>
+    let currentIndex = 0;
+  
+    function loadAnimalInfo() {
+      fetch('animal') // Replace with your actual endpoint to fetch animal data
+        .then(response => response.json())
+        .then(data => {
+          const animalInfoSlider = document.getElementById('animalInfoSlider');
+          animalInfoSlider.innerHTML = ''; // Clear existing content
+  
+          // For each animal, create a slide with its details
+          data.forEach(animal => {
+            const slide = document.createElement('div');
+            slide.className = 'carousel-item';
+  
+            // Animal details formatted in paragraphs
+            slide.innerHTML = `
+              <h3>${animal.Name}</h3>
+              <p><strong>Species:</strong> ${animal.Species}</p>
+              <p><strong>Age:</strong> ${animal.Age || 'N/A'}</p>
+              <p><strong>Gender:</strong> ${animal.Gender || 'N/A'}</p>
+              <p><strong>Health Status:</strong> ${animal.Health_Status || 'N/A'}</p>
+              <p><strong>Feed Schedule:</strong> ${animal.Feed_Schedule || 'N/A'}</p>
+              <p><strong>Enclosure ID:</strong> ${animal.Enclosure_ID || 'N/A'}</p>
+              <p><strong>Zoo ID:</strong> ${animal.Zoo_ID || 'N/A'}</p>
+            `;
+            animalInfoSlider.appendChild(slide);
+          });
+  
+          // Initialize the first slide position
+          showSlide(0);
+        })
+        .catch(error => console.error('Error loading animal info:', error));
+    }
+  
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.carousel-item');
+      if (index >= slides.length) currentIndex = 0;
+      if (index < 0) currentIndex = slides.length - 1;
+  
+      const offset = -currentIndex * 100;
+      document.getElementById('animalInfoSlider').style.transform = `translateX(${offset}%)`;
+    }
+  
+    document.querySelector('.prev-btn').addEventListener('click', () => {
+      currentIndex -= 1;
+      showSlide(currentIndex);
+    });
+  
+    document.querySelector('.next-btn').addEventListener('click', () => {
+      currentIndex += 1;
+      showSlide(currentIndex);
+    });
+  
+    // Load animal info on page load
+    window.onload = loadAnimalInfo;
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="book_ticket.css">
+</head>
+<body>
+    <section class="ticket-booking-section">
+        <h2>Book Your Ticket</h2>
+        <form id="ticketForm">
+            <label for="visitorID">Visitor ID:</label>
+            <input type="number" id="visitorID" name="visitorID" required>
+    
+            <label for="zooID">Zoo ID:</label>
+            <input type="number" id="zooID" name="zooID" required>
+    
+            <label for="ticketType">Ticket Type:</label>
+            <select id="ticketType" name="ticketType" required>
+                <!-- Options will be populated by JavaScript -->
+            </select>
+    
+            <label for="visitDate">Visit Date:</label>
+            <input type="date" id="visitDate" name="visitDate" required>
+    
+            <button type="submit" id="book">Book Ticket</button>
+        </form>
+    </section>
+    
+    <script src="book_ticket.js"></script>
+    
+</body>
+</html>

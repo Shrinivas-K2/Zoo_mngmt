@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashboard</title>
+    <link rel="stylesheet" href="employee-dashbaord.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Animal Management Section -->
+        <h2>Manage Animals</h2>
+        <form id="addAnimalForm">
+            <input type="text" id="animalName" placeholder="Animal Name" required>
+            <input type="text" id="animalSpecies" placeholder="Species" required>
+            <input type="number" id="animalAge" placeholder="Age" min="0" required>
+            <select id="animalGender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="text" id="animalHealthStatus" placeholder="Health Status" required>
+            <input type="text" id="animalFeedSchedule" placeholder="Feed Schedule" required>
+            <input type="number" id="animalEnclosureId" placeholder="Enclosure ID" required>
+            <input type="number" id="animalZooId" placeholder="Zoo ID" required>
+            <button type="submit">Add Animal</button>
+        </form>
+        
+        <table id="animalTable">
+            <thead>
+                <tr>
+                    <th>Animal ID</th>
+                    <th>Name</th>
+                    <th>Species</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Health Status</th>
+                    <th>Feed Schedule</th>
+                    <th>Enclosure ID</th>
+                    <th>Zoo ID</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Animal rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+
+        <!-- Zoo Event Section -->
+        <h2>Add Zoo Event</h2>
+        <form id="addEventForm">
+            <input type="text" id="eventName" placeholder="Event Name" required>
+            <input type="text" id="eventDescription" placeholder="Description" required>
+            <input type="date" id="eventDate" required>
+            <button type="submit">Add Event</button>
+        </form>
+        
+        <table id="eventTable">
+            <thead>
+                <tr>
+                    <th>Event ID</th>
+                    <th>Event Name</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Event rows will be inserted here dynamically -->
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="animal-emp.js"></script>
+</body>
+</html>

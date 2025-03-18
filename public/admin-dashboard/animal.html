@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Animal Management</title>
+    <link rel="stylesheet" href="animal.css">
+    <!-- Add Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <!-- Form Section -->
+        <h2>Add New Animal</h2>
+        <form action="/animal" method="POST" id="addAnimalForm">
+            <div class="form-group">
+                <label for="name">Animal Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="species">Species:</label>
+                <input type="text" id="species" name="species" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="healthStatus">Health Status:</label>
+                <input type="text" id="healthStatus" name="healthStatus" required>
+            </div>
+            <div class="form-group">
+                <label for="feedSchedule">Feed Schedule:</label>
+                <input type="text" id="feedSchedule" name="feedSchedule" required>
+            </div>
+            <div class="form-group">
+                <label for="enclosureId">Enclosure ID:</label>
+                <input type="number" id="enclosureId" name="enclosureId" min="1" required>
+            </div>
+            <div class="form-group">
+                <label for="zooId">Zoo ID:</label>
+                <input type="number" id="zooId" name="zooId" min="1" required>
+            </div>
+            <button type="submit" class="submit-button">Add Animal</button>
+        </form>
+
+       <!-- Display Section -->
+<h2>All Animal Details</h2>
+<table id="animalTable">
+    <thead>
+        <tr>
+            <th>Animal ID</th>
+            <th>Name</th>
+            <th>Species</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Health Status</th>
+            <th>Feed Schedule</th>
+            <th>Enclosure ID</th>
+            <th>Zoo ID</th>
+            <th>Actions</th> <!-- Add Actions column -->
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Animal data will be dynamically inserted here -->
+    </tbody>
+</table>
+</div>
+
+    <script src="animal.js"></script>
+</body>
+</html>
